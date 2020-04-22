@@ -30,5 +30,26 @@
 		
 三、分支管理
 	1.分支介绍：
-		创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上干活，
-		想提交就提交，直到开发完毕后，再一次性合并到原来的分支上，这样，既安全，又不影响别人工作。
+		*创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上干活，
+			想提交就提交，直到开发完毕后，再一次性合并到原来的分支上，这样，既安全，又不影响别人工作。
+	2.创建和合并分支
+		* HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支,
+			所以当我们创建新的分支，例如dev时，Git新建了一个指针叫dev，指向master相同的提交，再把HEAD指向dev，
+			就表示当前分支在dev上，把dev合并到master上，就是直接把master指向dev的当前提交。删除dev分支就是把
+			dev指针给删掉。
+		* git checkout -b dev  --创建dev分支并切换到dev分支
+		* git branch --列出所有分支，当前分支前面会标一个*号
+		* git checkout master --切换回master分支 但是切换分支这个动作，用switch更科学
+			* git switch -c dev --创建并切换到新的dev分支
+			* git switch master --直接切换到已有的master分支
+		* git merge dev --把dev分支的内容合并到当前分支
+		* git branch -d dev  --删除dev分支
+	3.解决冲突：
+		* 当合并分支的时候可能会出现冲突，例如出现：Automatic merge failed; fix conflicts and then commit the result.
+			可以用git status 命令查看冲突文件，找到文件解决冲突内容后，再进行提交。
+		*使用git log --graph --pretty=oneline --abbrev-commit 命令可以查看合并情况
+		* 当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
+			解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。
+			用git log --graph命令可以看到分支合并图。
+		
+			
