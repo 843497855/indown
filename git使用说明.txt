@@ -47,9 +47,9 @@
 	3.解决冲突：
 		* 当合并分支的时候可能会出现冲突，例如出现：Automatic merge failed; fix conflicts and then commit the result.
 			可以用git status 命令查看冲突文件，找到文件解决冲突内容后，再进行提交。
-		*使用git log --graph --pretty=oneline --abbrev-commit 命令可以查看合并情况
+		*使用git log --graph --pretty=oneline --abbrev-commit 命令可以查看合并情况（图）。
 		* 当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
 			解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。
-			用git log --graph命令可以看到分支合并图。
+			
 		
 			
