@@ -52,7 +52,8 @@
 			解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。
 			
 	4.分支策略
-		*
+		*git merge --no-ff -m "merge with no-ff" dev  --准备合并dev分支，请注意--no-ff参数，表示禁用Fast forward
 		*合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，
 			而fast forward合并就看不出来曾经做过合并。
+		
 			
