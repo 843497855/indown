@@ -100,3 +100,9 @@
 	*在GitHub上，可以任意Fork开源仓库；
 	*自己拥有Fork后的仓库的读写权限；
 	*可以推送pull request给官方仓库来贡献代码。
+	
+六、使用Gitee
+	1.与github 关联远程库一样
+	2.默认是origin库 可删除 然后分别关联github和gitee仓库，实现多远程仓库同步
+	3.基本命令与GitHub一样
+	
