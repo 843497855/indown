@@ -80,6 +80,23 @@
 	8.rebase
 		*git rebase --可以把本地未push的分叉提交历史整理成直线.
 		*rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。
-		
-		
-		
+	
+四、标签管理
+	1.创建标签
+		* git tag <tagname> --命令git tag <name>就可以打一个新标签
+		* git tag --查看所有标签
+		* git log --pretty=oneline --abbrev-commit 	--默认标签是打在最新提交的commit上的。有时候，
+			如果忘了打标签，方法是找到历史提交的commit id，然后打上
+		* git tag v0.9 f52c633 --打标签，它对应的commit id是f52c633
+		* git show v0.9 --查看标签信息
+		* git tag -a v0.1 -m "xxxxx" <commit id>  --创建带有说明的标签，用-a指定标签名，-m指定说明文字
+	2.操作标签
+		* git push origin <tagname> --向远程推送标签
+		* git push origin --tags --向远程推送此前未推送的标签
+		* git tag -d <tagname>    --可以删除一个本地标签
+		* git push origin :refs/tags/<tagname>   --可以删除一个远程标签，注意要先删除本地的这个标签
+
+五、使用GitHub
+	*在GitHub上，可以任意Fork开源仓库；
+	*自己拥有Fork后的仓库的读写权限；
+	*可以推送pull request给官方仓库来贡献代码。
